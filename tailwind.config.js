@@ -7,12 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "primary": "#FAFAFA"
+      },
+      screens: {
+        'xs': '500px',   // Extra small devices
+        'sm': '640px',   // Small devices
+        'md': '800px',   // Medium devices
+        'lg': '1000px',  // Large devices
+        'xl': '1200px',  // Extra large devices
+        '2xl': '1536px', // 2x Extra large devices
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 };
